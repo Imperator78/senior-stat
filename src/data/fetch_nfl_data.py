@@ -63,4 +63,3 @@ def calculate_expected_points(row):
         return 3.0  # Example value for field goal
     else:
         return -2.0  # Example value for turnover or failed attempt
-"""
