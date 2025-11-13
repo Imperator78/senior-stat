@@ -25,21 +25,8 @@ from scipy.stats import genextreme
 
 try:
     # --- UNCOMMENT THE LINE BELOW and replace with your file path ---
-    # data = pd.read_csv('path/to/your/mens_5000m_annual_bests.csv')
+    data = pd.read_csv('/Users/justin/Documents/4th-down/nfl-4th-down-heatmap/src/WorldRecords/FastestTimes.csv')
     
-    # --- (Remove or comment out the FAKE DATA block below) ---
-    print("LOADING FAKE DATA. Replace this block with your own data.")
-    np.random.seed(42)
-    # Generate fake years from 1980 to 2024
-    fake_years = np.arange(1980, 2025)
-    # Create fake times with a downward trend (improving times) plus random noise
-    fake_times = 400 - (fake_years - 1980) * 0.8 + np.random.normal(0, 2, len(fake_years))
-    # Add some dramatic improvements (simulating breakthrough performances)
-    fake_times[10] -= 10
-    fake_times[25] -= 5
-    fake_times[40] -= 7
-    data = pd.DataFrame({'Year': fake_years, 'Best_Time': fake_times})
-    # --- End of Fake Data Block ---
 
     # --- Data Pre-processing ---
     # GEV models MAXIMA (largest values), but we have MINIMA (fastest times).
@@ -289,7 +276,7 @@ plt.show()
 # You MUST set this value manually to the *current* official
 # world record for the event you are modeling.
 
-current_record = 356.78  # <--- EXAMPLE. REPLACE THIS VALUE!
+current_record = 65.37  # <--- EXAMPLE. REPLACE THIS VALUE!
 
 # --- (End of required action) ---
 
