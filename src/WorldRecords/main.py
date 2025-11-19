@@ -87,7 +87,7 @@ plt.show()
 print("\n--- Next Year's Best Time ---")
 # Get the 'year' value for next year (in years since start)
 next_year_value = years_since_start[-1] + 1
-next_year_actual = data['Year'].max() + 1
+next_year_actual = data['Year'].max() + 2
 
 posterior = trace.posterior
 beta_0_samples = posterior['beta_0'].values.flatten()
